@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1a1a2e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ClawSlack">
+<title>ClawSlack · 技术支持 & 隐私政策</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'SF Pro', 'Helvetica Neue', sans-serif;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.8;
+  }
+  .container { max-width: 700px; width: 100%; }
+  .header { text-align: center; margin-bottom: 28px; padding-top: 12px; }
+  .header .icon { font-size: 44px; margin-bottom: 8px; }
+  .header h1 { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+  .lang-bar { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+  .lang-btn {
+    padding: 6px 18px; font-size: 13px; font-weight: 600; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15); background: transparent;
+    color: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.2s;
+  }
+  .lang-btn.active { background: rgba(124,124,240,0.2); border-color: #7c7cf0; color: #fff; }
+  .lang-btn:active { transform: scale(0.95); }
+  .tab-nav {
+    display: flex; gap: 4px; background: rgba(255,255,255,0.04);
+    border-radius: 14px; padding: 4px; margin-bottom: 24px;
+  }
+  .tab-btn {
+    flex: 1; text-align: center; padding: 10px 6px; font-size: 13px; font-weight: 500;
+    color: rgba(255,255,255,0.45); background: transparent; border: none;
+    border-radius: 11px; cursor: pointer; transition: all 0.25s;
+  }
+  .tab-btn.active { background: rgba(255,255,255,0.1); color: #fff; box-shadow: 0 1px 6px rgba(0,0,0,0.25); }
+  .tab-btn:active { transform: scale(0.96); }
+  .section { display: none; }
+  .section.active { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px; padding: 28px 22px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .card h3 { font-size: 15px; font-weight: 600; color: #c0c0e0; margin: 20px 0 8px; }
+  .card h3:first-of-type { margin-top: 0; }
+  .card p, .card li { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+  .card ul, .card ol { padding-left: 20px; }
+  .card li { margin-bottom: 4px; }
+  .card a { color: #7c7cf0; text-decoration: none; border-bottom: 1px solid rgba(124,124,240,0.3); }
+  .card a:active { opacity: 0.7; }
+  .b { display: block; }
+  .b.en { display: none; }
+  body.lang-en .b.zh { display: none; }
+  body.lang-en .b.en { display: block; }
+  .tag {
+    display: inline-block; background: rgba(124,124,240,0.15); color: #7c7cf0;
+    font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 20px; margin-right: 4px;
+  }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 20px 0; }
+  .last-updated { text-align: center; font-size: 12px; color: rgba(255,255,255,0.25); margin: 32px 0 40px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🐄</div>
+  <h1>ClawSlack</h1>
+</div>
+
+<div class="lang-bar">
+  <button class="lang-btn active" data-lang="zh">中文</button>
+  <button class="lang-btn" data-lang="en">English</button>
+</div>
+
+<div class="tab-nav" id="tabNav">
+  <button class="tab-btn active" data-tab="support"><span class="b zh">📞 技术支持</span><span class="b en">📞 Support</span></button>
+  <button class="tab-btn" data-tab="privacy"><span class="b zh">🔒 隐私政策</span><span class="b en">🔒 Privacy</span></button>
+</div>
+
+<!-- ===================== 技术支持 ===================== -->
+<div class="section active" id="tab-support">
+  <div class="card">
+
+    <h2><span class="b zh">📞 技术支持</span><span class="b en">📞 Support</span></h2>
+
+    <div class="b zh">
+      <p>感谢你使用 ClawSlack！如果在使用过程中遇到任何问题，请查阅以下常见问题，或直接联系我们。</p>
+      <h3>❓ 常见问题</h3>
+      <p><strong>Q: 什么是 ClawSlack？</strong></p>
+      <p>ClawSlack 是一款佛系摸鱼打卡 App。你可以记录每天的摸鱼时刻，上传摸鱼证据（照片/视频），查看自己的摸鱼日历和统计，还能跟好友互动点赞。</p>
+      <p><strong>Q: 打不开 App 怎么办？</strong></p>
+      <p>请确认你的设备运行 iOS 16.0 或以上版本。如果仍然打不开，请尝试重启 App 或重新安装。</p>
+      <p><strong>Q: 照片/视频无法上传？</strong></p>
+      <p>请检查网络连接，并确认已授予 ClawSlack 相册和相机权限。如果权限被拒绝，请前往 设置 → 隐私 → 相册/相机 中开启。</p>
+      <p><strong>Q: Face ID 无法使用？</strong></p>
+      <p>ClawSlack 使用 Face ID 保护你的隐私记录。如果无法使用，请确保设备支持 Face ID 且已在 设置 → Face ID 与密码 中开启。</p>
+      <p><strong>Q: 锁屏密码忘记了怎么办？</strong></p>
+      <p>ClawSlack 的锁屏密码仅存储在本地设备上，我们无法代为找回。如果忘记，可尝试卸载重装 App，但请注意这会导致本地数据丢失。</p>
+      <p><strong>Q: 数据会丢失吗？</strong></p>
+      <p>ClawSlack 数据默认存储在本地及云端。建议不要随意卸载 App 以免数据丢失。如需备份，可在 App 设置中导出数据。</p>
+      <h3>📧 联系我们</h3>
+      <p>如果以上 FAQ 无法解决你的问题，请通过以下方式联系技术支持团队：</p>
+      <p style="margin-top:8px;">
+        📩 <strong>邮箱</strong>：<a href="mailto:mooou@xiagaogdp.top">mooou@xiagaogdp.top</a><br>
+        💬 <strong>反馈</strong>：App 内「设置」→「意见反馈」直接提交
+      </p>
+      <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">我们会在 1~3 个工作日内回复。</p>
+    </div>
+
+    <div class="b en">
+      <p>Thank you for using ClawSlack! If you encounter any issues, check the FAQ below or contact us directly.</p>
+      <h3>❓ FAQ</h3>
+      <p><strong>Q: What is ClawSlack?</strong></p>
+      <p>ClawSlack is a laid-back slacking-off check-in app. Record your daily slack-off moments, upload proof (photos/videos), view your calendar and stats, and interact with friends.</p>
+      <p><strong>Q: The app won't open?</strong></p>
+      <p>Make sure your device is running iOS 16.0 or later. If it still won't open, try restarting the app or reinstalling it.</p>
+      <p><strong>Q: Can't upload photos/videos?</strong></p>
+      <p>Check your network connection and make sure ClawSlack has photo library and camera permissions. Go to Settings → Privacy → Photos/Camera to enable them.</p>
+      <p><strong>Q: Face ID not working?</strong></p>
+      <p>ClawSlack uses Face ID to protect your privacy records. Make sure your device supports Face ID and it's enabled in Settings → Face ID & Passcode.</p>
+      <p><strong>Q: Forgot your lock screen passcode?</strong></p>
+      <p>The lock screen passcode is stored only on your device. We cannot retrieve it. If forgotten, try uninstalling and reinstalling the app, but note that local data will be lost.</p>
+      <p><strong>Q: Will I lose my data?</strong></p>
+      <p>Data is stored locally and in the cloud by default. Avoid uninstalling the app unnecessarily. You can export data from the app settings for backup.</p>
+      <h3>📧 Contact Us</h3>
+      <p>If the FAQ doesn't solve your issue, reach out to our support team:</p>
+      <p style="margin-top:8px;">
+        📩 <strong>Email</strong>: <a href="mailto:mooou@xiagaogdp.top">mooou@xiagaogdp.top</a><br>
+        💬 <strong>Feedback</strong>: App Settings → Feedback
+      </p>
+      <p style="font-size:13px; color:rgba(255,255,255,0.4); margin-top:12px;">We typically respond within 1–3 business days.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== 隐私政策 ===================== -->
+<div class="section" id="tab-privacy">
+  <div class="card">
+
+    <h2><span class="b zh">🔒 隐私政策</span><span class="b en">🔒 Privacy Policy</span></h2>
+    <p><span class="tag"><span class="b zh">最后更新</span><span class="b en">Last updated</span></span> <span class="b zh">2026 年 7 月 14 日</span><span class="b en">July 14, 2026</span></p>
+
+    <div class="b zh">
+      <p>ClawSlack（以下简称"我们"）深知个人隐私的重要性。本隐私政策说明了我们如何收集、使用、存储和保护你的个人信息。</p>
+      <p><strong>使用 ClawSlack 即表示你同意本政策所述做法。</strong></p>
+
+      <h3>1. 我们收集的信息</h3>
+      <ul>
+        <li><strong>账户信息</strong>：当你注册时，我们会收集你的昵称、头像、邮箱地址。</li>
+        <li><strong>使用数据</strong>：打卡记录、照片/视频（你主动上传的摸鱼证据）、点赞和互动数据。</li>
+        <li><strong>设备信息</strong>：设备型号、iOS 版本、App 版本。</li>
+        <li><strong>生物识别</strong>：如果你启用锁屏 Face ID 保护，Face ID 数据仅在设备本地由系统处理，我们无法访问。</li>
+      </ul>
+
+      <h3>2. 信息的使用</h3>
+      <ul>
+        <li>提供和优化 ClawSlack 的核心功能（打卡、统计、社交）。</li>
+        <li>处理你的反馈和技术支持请求。</li>
+        <li>发送服务通知（如版本更新、重要公告）。</li>
+        <li><strong>我们不会将你的数据用于广告投放或出售给第三方。</strong></li>
+      </ul>
+
+      <h3>3. 信息的存储与安全</h3>
+      <ul>
+        <li>数据采用加密传输（HTTPS / TLS）。</li>
+        <li>你的照片和打卡记录存储在安全的云端服务器。</li>
+        <li>本地 Face ID / 锁屏密码数据 Apple 系统级保护，我们无法读取。</li>
+        <li>我们会采取合理的技术和管理措施保护你的数据，但任何互联网传输都无法保证 100% 安全。</li>
+      </ul>
+
+      <h3>4. 数据分享</h3>
+      <ul>
+        <li>你的打卡内容在你设置的可见范围内对好友展示。</li>
+        <li>我们不会将你的个人信息分享给第三方，除非：法律要求、保护我们的合法权益、或获得你的明确同意。</li>
+      </ul>
+
+      <h3>5. 你的权利</h3>
+      <ul>
+        <li><strong>访问和更正</strong>：你可以在 App 设置中随时查看和修改你的个人信息。</li>
+        <li><strong>删除</strong>：你可以要求删除你的账户和所有关联数据。请通过 mooou@xiagaogdp.top 提交请求。</li>
+        <li><strong>退出</strong>：你可以随时卸载 App 停止使用。已上传的云端数据可申请删除。</li>
+      </ul>
+
+      <h3>6. 未成年人保护条款</h3>
+      <p>我们重视未成年人的个人信息保护。若您为未成年人，请在监护人的陪同下阅读本政策，并在监护人明确同意的前提下使用我们的服务。</p>
+      <p>根据您所在司法管辖区的相关法律法规，对于未满法定同意年龄的用户，我们将在获得监护人同意前，不主动收集、使用或披露其个人信息。监护人有权随时联系我们，要求更正或删除未成年人的个人信息。</p>
+      <p>若您发现我们未经监护人同意收集了未成年人的个人信息，请立即通过以下方式联系我们，我们将在核实后及时采取措施删除相关数据：<br>📩 <a href="mailto:mooou@xiagaogdp.top">mooou@xiagaogdp.top</a></p>
+
+      <h3>7. 政策变更</h3>
+      <p>我们可能会不时更新本隐私政策。重大变更将通过 App 内通知或邮件告知。继续使用即表示同意更新后的政策。</p>
+
+      <h3>8. 联系我们</h3>
+      <p>如有隐私相关问题，请联系：<a href="mailto:mooou@xiagaogdp.top">mooou@xiagaogdp.top</a></p>
+    </div>
+
+    <div class="b en">
+      <p>ClawSlack ("we", "us", or "our") takes your privacy seriously. This Privacy Policy explains how we collect, use, store, and protect your personal information.</p>
+      <p><strong>By using ClawSlack, you agree to the practices described in this policy.</strong></p>
+
+      <h3>1. Information We Collect</h3>
+      <ul>
+        <li><strong>Account info</strong>: When you sign up, we collect your nickname, avatar, and email address.</li>
+        <li><strong>Usage data</strong>: Check-in records, photos/videos (proof you upload), likes, and interaction data.</li>
+        <li><strong>Device info</strong>: Device model, iOS version, app version.</li>
+        <li><strong>Biometric data</strong>: If you enable lock screen Face ID protection, Face ID data is handled entirely on-device by the system — we cannot access it.</li>
+      </ul>
+
+      <h3>2. How We Use Information</h3>
+      <ul>
+        <li>Providing and improving core ClawSlack features (check-in, statistics, social).</li>
+        <li>Processing feedback and support requests.</li>
+        <li>Sending service notifications (e.g., version updates, important announcements).</li>
+        <li><strong>We do not use your data for advertising or sell it to third parties.</strong></li>
+      </ul>
+
+      <h3>3. Storage & Security</h3>
+      <ul>
+        <li>Data is transmitted over encrypted connections (HTTPS / TLS).</li>
+        <li>Your photos and check-in records are stored on secure cloud servers.</li>
+        <li>Local Face ID / passcode data is protected at the OS level by Apple — we cannot read it.</li>
+        <li>We take reasonable technical and administrative measures to protect your data, but no internet transmission is 100% secure.</li>
+      </ul>
+
+      <h3>4. Data Sharing</h3>
+      <ul>
+        <li>Your check-in content is visible to friends within the visibility range you set.</li>
+        <li>We do not share your personal information with third parties except: when required by law, to protect our legal rights, or with your explicit consent.</li>
+      </ul>
+
+      <h3>5. Your Rights</h3>
+      <ul>
+        <li><strong>Access and correction</strong>: You can view and update your personal info anytime in the app settings.</li>
+        <li><strong>Deletion</strong>: You can request deletion of your account and all associated data via mooou@xiagaogdp.top.</li>
+        <li><strong>Opt-out</strong>: You can uninstall the app at any time. Uploaded cloud data can be deleted upon request.</li>
+      </ul>
+
+      <h3>6. Protection of Minors</h3>
+      <p>We take the protection of minors' personal information seriously. If you are a minor, please read this policy with your parent or guardian, and only use our services with their explicit consent.</p>
+      <p>In accordance with applicable laws in your jurisdiction, for users below the age of legal consent, we will not actively collect, use, or disclose personal information until we have obtained verifiable parental consent. Guardians have the right to contact us at any time to request correction or deletion of a minor's personal information.</p>
+      <p>If you discover that we have collected personal information from a minor without proper parental consent, please contact us immediately. We will verify and promptly delete the relevant data:<br>📩 <a href="mailto:mooou@xiagaogdp.top">mooou@xiagaogdp.top</a></p>
+
+      <h3>7. Policy Changes</h3>
+      <p>We may update this policy from time to time. Material changes will be communicated via in-app notice or email. Continued use constitutes acceptance of the updated policy.</p>
+
+      <h3>8. Contact Us</h3>
+      <p>For privacy-related questions: <a href="mailto:mooou@xiagaogdp.top">mooou@xiagaogdp.top</a></p>
+    </div>
+
+  </div>
+</div>
+
+<div class="last-updated">
+  ClawSlack · <span class="b zh">数据最后更新 2026 年 7 月 14 日</span><span class="b en">Last updated July 14, 2026</span>
+</div>
+</div>
+
+<script>
+(function() {
+  const langBtns = document.querySelectorAll('.lang-btn');
+  langBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var lang = this.dataset.lang;
+      langBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      document.body.className = 'lang-' + lang;
+    });
+  });
+  var tabs = document.querySelectorAll('.tab-btn');
+  var sections = {
+    support: document.getElementById('tab-support'),
+    privacy: document.getElementById('tab-privacy')
+  };
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var tab = this.dataset.tab;
+      tabs.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      Object.keys(sections).forEach(function(key) {
+        sections[key].classList.toggle('active', key === tab);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  var hashMap = { '#support': 'support', '#privacy': 'privacy' };
+  var hashTab = hashMap[window.location.hash];
+  if (hashTab) {
+    var targetBtn = document.querySelector('.tab-btn[data-tab="' + hashTab + '"]');
+    if (targetBtn) targetBtn.click();
+  }
+})();
+</script>
+</body>
+</html>
