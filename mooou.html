@@ -86,6 +86,7 @@
 <div class="tab-nav" id="tabNav">
   <button class="tab-btn active" data-tab="support"><span class="b zh">📞 技术支持</span><span class="b en">📞 Support</span></button>
   <button class="tab-btn" data-tab="privacy"><span class="b zh">🔒 隐私政策</span><span class="b en">🔒 Privacy</span></button>
+  <button class="tab-btn" data-tab="eula"><span class="b zh">📄 用户协议 (EULA)</span><span class="b en">📄 Terms (EULA)</span></button>
 </div>
 
 <!-- ===================== 技术支持 ===================== -->
@@ -261,6 +262,26 @@
   </div>
 </div>
 
+<!-- ===================== EULA ===================== -->
+<div class="section" id="tab-eula">
+  <div class="card">
+
+    <h2><span class="b zh">📄 最终用户许可协议 (EULA)</span><span class="b en">📄 End User License Agreement (EULA)</span></h2>
+    <p><span class="tag"><span class="b zh">最后更新</span><span class="b en">Last updated</span></span> <span class="b zh">2026 年 7 月 28 日</span><span class="b en">July 28, 2026</span></p>
+
+    <div class="b zh">
+      <p>本应用使用 <strong>Apple 标准最终用户许可协议</strong>（Standard EULA），详见：</p>
+      <p style="margin-top:12px;"><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+    </div>
+
+    <div class="b en">
+      <p>This app is governed by the <strong>Apple Standard End User License Agreement</strong>, available at:</p>
+      <p style="margin-top:12px;"><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+    </div>
+
+  </div>
+</div>
+
 <div class="last-updated">
   MoooU · <span class="b zh">数据最后更新 2026 年 7 月 14 日</span><span class="b en">Last updated July 14, 2026</span>
 </div>
@@ -280,7 +301,8 @@
   var tabs = document.querySelectorAll('.tab-btn');
   var sections = {
     support: document.getElementById('tab-support'),
-    privacy: document.getElementById('tab-privacy')
+    privacy: document.getElementById('tab-privacy'),
+    eula: document.getElementById('tab-eula')
   };
   tabs.forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -293,7 +315,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-  var hashMap = { '#support': 'support', '#privacy': 'privacy' };
+  var hashMap = { '#support': 'support', '#privacy': 'privacy', '#eula': 'eula' };
   var hashTab = hashMap[window.location.hash];
   if (hashTab) {
     var targetBtn = document.querySelector('.tab-btn[data-tab="' + hashTab + '"]');
